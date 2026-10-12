@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 고정 수직선 (좌측 1개, 우측 1개) */
+.vertical-axis {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #000000;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* 스테이지 */
+.kinetic-stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 개별 직사각형 독립 유닛 */
+.rect-unit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: grab;
+  touch-action: none;
+  will-change: transform;
+  z-index: 10;
+}
+
+.rect-unit.is-dragging {
+  cursor: grabbing;
+}
+
+/* 1. 검은색 fill 상태 */
+.rect-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  will-change: clip-path;
+  pointer-events: none;
+}
+
+/* 2. 상단 border line & 3. 하단 border line */
+.line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  will-change: clip-path;
+  pointer-events: none;
+}
+
+.line-top {
+  top: 0;
+}
+
+.line-bottom {
+  bottom: 0;
+}
+
+/* 텍스트 레이어 (수직선 통과 시 선 사이에서 reveal되는 영역) */
+.text-layer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 5;
+  will-change: clip-path;
+}
+
+.text-layer span {
+  display: inline-block;
+  line-height: 1;
+  transform: translateY(-0.061em); /* 폰트 메트릭 편차를 보정하여 글자 실제 잉크를 선 사이 정확한 midpoint에 배치 */
+}
+
+/* 왼쪽 텍스트: 우측 정렬 (오른쪽 끝이 왼쪽 수직선을 향함) */
+.text-layer.text-left {
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+/* 오른쪽 텍스트: 좌측 정렬 (왼쪽 끝이 오른쪽 수직선을 향함) */
+.text-layer.text-right {
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+

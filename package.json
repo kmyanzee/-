@@ -1,0 +1,9 @@
+{
+  "name": "digs-kinetic",
+  "version": "1.0.0",
+  "description": "Kinetic Motion Experiment",
+  "scripts": {
+    "dev": "open http://localhost:8089",
+    "start": "open http://localhost:8089"
+  }
+}

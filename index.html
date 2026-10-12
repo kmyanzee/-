@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinetic Motion Experiment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- 좌우 고정 수직선 2개 -->
+  <div class="vertical-axis axis-left" id="axisLeft"></div>
+  <div class="vertical-axis axis-right" id="axisRight"></div>
+
+  <!-- 스테이지 -->
+  <main class="kinetic-stage" id="stage">
+    <!-- 왼쪽 텍스트 레이어 (7개) -->
+    <div class="text-layer text-left" data-side="left" data-row="0"><span>누가</span></div>
+    <div class="text-layer text-left" data-side="left" data-row="1"><span>날</span></div>
+    <div class="text-layer text-left" data-side="left" data-row="2"><span>깎아내린다면</span></div>
+    <div class="text-layer text-left" data-side="left" data-row="3"><span>그냥</span></div>
+    <div class="text-layer text-left" data-side="left" data-row="4"><span>날</span></div>
+    <div class="text-layer text-left" data-side="left" data-row="5"><span>조각한다고</span></div>
+    <div class="text-layer text-left" data-side="left" data-row="6"><span>생각할게</span></div>
+
+    <!-- 오른쪽 텍스트 레이어 (7개) -->
+    <div class="text-layer text-right" data-side="right" data-row="0"><span>누가</span></div>
+    <div class="text-layer text-right" data-side="right" data-row="1"><span>날</span></div>
+    <div class="text-layer text-right" data-side="right" data-row="2"><span>깎아내린다면</span></div>
+    <div class="text-layer text-right" data-side="right" data-row="3"><span>그냥</span></div>
+    <div class="text-layer text-right" data-side="right" data-row="4"><span>날</span></div>
+    <div class="text-layer text-right" data-side="right" data-row="5"><span>조각한다고</span></div>
+    <div class="text-layer text-right" data-side="right" data-row="6"><span>생각할게</span></div>
+
+    <!-- 왼쪽 직사각형 바 (7개) -->
+    <div class="rect-unit rect-left" data-side="left" data-row="0">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-left" data-side="left" data-row="1">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-left" data-side="left" data-row="2">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-left" data-side="left" data-row="3">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-left" data-side="left" data-row="4">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-left" data-side="left" data-row="5">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-left" data-side="left" data-row="6">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+
+    <!-- 오른쪽 직사각형 바 (7개) -->
+    <div class="rect-unit rect-right" data-side="right" data-row="0">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-right" data-side="right" data-row="1">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-right" data-side="right" data-row="2">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-right" data-side="right" data-row="3">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-right" data-side="right" data-row="4">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-right" data-side="right" data-row="5">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+    <div class="rect-unit rect-right" data-side="right" data-row="6">
+      <div class="rect-fill"></div>
+      <div class="line line-top"></div>
+      <div class="line line-bottom"></div>
+    </div>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
